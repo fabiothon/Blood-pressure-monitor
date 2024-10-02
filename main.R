@@ -25,12 +25,12 @@ ggplot(bp_data, aes(x = time)) +
   geom_point(aes(y = pulse, color = "Heart rate"))+
   scale_color_manual(values = c("Systolic" = "red", "Diastolic" = "blue", 
                                 "Heart rate" = "darkgrey")) +
-  labs(title = "Blood pressure of Human (2000)",
+  labs(title = "Blood pressure of Steve Shoes (1984)",
        subtitle = paste("Average (Systolic):", round(mean(bp_data$systolic_pressure), 
                                                      digits = 1 ), 
                         " / Average (Diastolic):", round(mean(bp_data$diastolic_pressure), 
                                                          digits = 1)),
-       caption = "System: Measurement DJ 239",
+       caption = "System: Blood Measure Machine XT-290",
        x = "Date", y = "Blood pressure [mmHg]", color = "Legend") +
   theme_bw()  +
   scale_y_continuous(sec.axis = sec_axis(~., name = "Heart rate [bpm]")) +
@@ -42,16 +42,15 @@ ggplot(bp_data, aes(x = time)) +
                                           ) +
   
   #Adding labels ----
-
   geom_text_repel(aes(y = systolic_pressure, label = systolic_pressure), 
                 color = "red", show.legend = FALSE, nudge_x = 0.1, nudge_y = 7,
                 segment.color = "grey") +
   geom_text_repel(aes(y = diastolic_pressure, label = diastolic_pressure), 
                   color = "blue", show.legend = FALSE, nudge_x = 0.1, nudge_y = 5, 
-                  segment.color = NA) +
+                  segment.color = "grey") +
   geom_text_repel(aes(y = pulse, label = pulse), 
                   color = "darkgrey", show.legend = FALSE, nudge_x = 0.1, nudge_y = 5,
-                  segment.color = NA)
+                  segment.color = "grey")
 
 #Mean -----
 round(mean(bp_data$systolic_pressure), digits = 1)
