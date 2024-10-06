@@ -9,8 +9,8 @@ options(ggrepel.max.overlaps = Inf)
 
 # Excel file input ------
 bp_data <- read_excel("//Users//fabiothon//Desktop//Code//Bloodpressure//bp.xlsx")
-
 head(bp_data)
+
 # Data conversion ----- 
 bp_data$time <- as.POSIXct(bp_data$time)
 head(bp_data$time)
@@ -27,7 +27,7 @@ ggplot(bp_data, aes(x = time)) +
                                 "Heart rate" = "darkgrey")) +
   labs(title = "Blood pressure of Steve Shoes (1984)",
        subtitle = paste("Average (Systolic):", round(mean(bp_data$systolic_pressure), 
-                                                     digits = 1 ), 
+                                                     digits = 1 ),
                         " / Average (Diastolic):", round(mean(bp_data$diastolic_pressure), 
                                                          digits = 1)),
        caption = "System: Blood Measure Machine XT-290",
