@@ -22,7 +22,7 @@ ggplot(bp_data, aes(x = time)) +
   geom_line(aes(y = diastolic_pressure, color = "Diastolic")) +
   geom_point(aes(y = diastolic_pressure, color = "Diastolic")) +
   geom_line(aes(y = pulse, color = "Heart rate")) +
-  geom_point(aes(y = pulse, color = "Heart rate"))+
+  geom_point(aes(y = pulse, color = "Heart rate")) +
   scale_color_manual(values = c("Systolic" = "red", "Diastolic" = "blue", 
                                 "Heart rate" = "darkgrey")) +
   labs(title = "Blood pressure of Steve Shoes (1984)",
