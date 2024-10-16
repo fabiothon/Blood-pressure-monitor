@@ -41,14 +41,14 @@ ggplot(bp_data, aes(x = time)) +
                   expand = c(0.01, 0.01)
                                           ) +
   
-  #Adding labels ----
-  geom_text_repel(aes(y = systolic_pressure, label = systolic_pressure), 
+# Adding labels ----
+  geom_text_repel(aes(y = systolic_pressure, label = systolic_pressure),
                 color = "red", show.legend = FALSE, nudge_x = 0.1, nudge_y = 7,
                 segment.color = "grey") +
-  geom_text_repel(aes(y = diastolic_pressure, label = diastolic_pressure), 
-                  color = "blue", show.legend = FALSE, nudge_x = 0.1, nudge_y = 5, 
+  geom_text_repel(aes(y = diastolic_pressure, label = diastolic_pressure),
+                  color = "blue", show.legend = FALSE, nudge_x = 0.1, nudge_y = 5,
                   segment.color = "grey") +
-  geom_text_repel(aes(y = pulse, label = pulse), 
+  geom_text_repel(aes(y = pulse, label = pulse),
                   color = "darkgrey", show.legend = FALSE, nudge_x = 0.1, nudge_y = 5,
                   segment.color = "grey")
 
