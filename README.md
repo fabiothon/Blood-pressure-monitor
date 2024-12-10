@@ -6,6 +6,10 @@ The script generates a line plot, where systolic, diastolic pressure, and pulse 
 
 The plot is further customized with axis labels, a title, a caption, and a dynamic subtitle showing average systolic and diastolic pressure. The mean systolic and diastolic pressures are calculated at the end of the script, rounding the systolic mean to one decimal place for clarity.
 
+## Application overview
+
+
+
 ## Requirements
 - [R](https://www.r-project.org)
 
